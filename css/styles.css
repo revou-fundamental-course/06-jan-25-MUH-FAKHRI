@@ -1,7 +1,8 @@
 body{
-    background-color: black;
+    background-color: rgb(39, 37, 90);
     color: white;
 }
+
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -41,22 +42,22 @@ nav>a {
     text-decoration: none;
 }
 
-.banner-image{
-    height: 450px;
-    background-image: url(https://i.ibb.co.com/3zd9nPW/cyber.jpg);
-    background-size: cover;
-    background-position: center;
+.slider {
+    width: 100%;
 }
 
-.banner-image>p{
-    padding: 50px;
-    padding-bottom:0;
-    height: 50px;
-    width: 500px;
+.paragraf{
+    display: flex;
+    justify-content: center;
+
+}
+
+.paragraf>p{
+    padding: 20px;
+    border: 2px solid black;
 }
 
 .content {
-    /* Opsinal */
     height: 500px;
     width: auto;
 }
