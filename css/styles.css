@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(39, 37, 90);
+    background-color: rgb(21, 20, 57);
     color: white;
 }
 
@@ -49,18 +49,136 @@ nav>a {
 .paragraf{
     display: flex;
     justify-content: center;
-
+    flex-wrap: wrap;
 }
 
 .paragraf>p{
     padding: 20px;
     border: 2px solid black;
+    background-color: #160e4d;
 }
 
 .content {
     height: 500px;
     width: auto;
 }
+
+/* Styling Section form */
+.form-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.form-section form,
+.form-section .preview-message {
+    flex: 1;
+    box-sizing: border-box;
+}
+
+/* Form styling */
+form {
+    margin-top: 15px;
+}
+  
+#userForm {
+    display: flex;
+    gap: 8px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: flex-start;
+}
+
+label {
+    min-width: 80px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.radio-group {
+    display: flex;
+    gap: 8px;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+input, textarea {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+button {
+    width: fit-content;
+    height: fit-content;
+    padding: 10px 16px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Preview Message */
+.preview-message {  
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    gap: 8px;
+}  
+
+.preview-item {
+    display: flex;
+    gap: 4px;
+}
+
 footer {
     text-align: center;
 }
+
+@media (max-width: 600px) {
+    header {  
+        flex-direction: column;  
+        align-items: center;  
+    }
+
+    .form-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+

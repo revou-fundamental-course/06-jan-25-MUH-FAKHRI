@@ -44,7 +44,7 @@
     </section>
     <hr>
     <!-- Our Profile -->
-    <section>
+    <section class="section">
         <!-- Title -->
         <header id="our-profile">
             <h1>My Profile</h1>
@@ -54,13 +54,6 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorem quo cum? Architecto sapiente facere beatae qui, animi eum delectus, distinctio exercitationem voluptates enim praesentium? Ipsum soluta quae accusantium alias!
             Corporis esse illo similique at dolores vero suscipit, modi consequuntur alias accusantium saepe ullam soluta voluptas beatae, corrupti perferendis ipsa magni quasi atque incidunt, nobis reprehenderit aperiam. Quod, hic beatae!</p><br>
 
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi alias corporis quisquam. Nulla eos asperiores ducimus dicta at quod possimus deleniti dolor natus, laudantium facilis blanditiis quia eligendi ex a.
-            Sint explicabo fuga perspiciatis architecto? Voluptates, officia placeat, illum molestiae velit aliquid adipisci excepturi eius aspernatur dolorem, sint ipsam minus? Odit eos dolorem minus repellat, voluptatibus atque dolore id officia!
-            Sed incidunt cumque labore soluta. Aliquam quibusdam blanditiis dolorum, consectetur commodi sequi fuga eos! Ipsum consectetur sunt sit eum! Pariatur praesentium, incidunt repellendus ab libero tenetur exercitationem non necessitatibus dolorum?
-            Illo at, eos doloribus commodi ratione repellendus pariatur cupiditate enim quos perferendis amet, quibusdam maxime sapiente eum sit incidunt doloremque dolor similique omnis non! Odio natus aperiam dignissimos explicabo eum?
-            Dolores quae soluta ratione nulla incidunt maxime voluptas vel, aspernatur voluptatibus saepe, quasi laboriosam doloribus perspiciatis facere suscipit sunt aut dolorem officia iusto ut sed pariatur cumque quas. Molestiae, modi.
-            Accusamus ex, fuga minus eaque ea ullam rem animi, officia cum, aut voluptatibus consectetur ipsum reprehenderit modi qui quasi dolorum. Distinctio magni necessitatibus eos eius, vero exercitationem at atque hic.</p><br>
-
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur ut nisi molestias. Architecto fugiat aut cupiditate enim impedit, dolor corrupti, nobis earum, error at esse inventore. Dignissimos ad blanditiis perferendis.
             Eum deleniti minima quod nemo amet! Laudantium rerum dolores, blanditiis ab exercitationem velit dolor debitis iste soluta, saepe vitae placeat unde explicabo quae dolorum illum temporibus ea sunt? Dolorem, suscipit.
             Obcaecati voluptatem inventore enim qui, exercitationem totam accusamus eos itaque quod perspiciatis officia. Iure, veniam. Fugiat cumque a nostrum. Quibusdam, laudantium. Maiores hic nisi at itaque. Optio, temporibus sunt. Odio.</p>
@@ -68,37 +61,72 @@
         </section>
         <hr>
     <!-- Message Us -->
-    <section>
+    <section class="section">
         <!-- Title -->
         <header id="message-us">
             <h1>Message Us</h1>
         </header>
         <hr>
-        <div class="content">
-            <label for="name"><b>Nama</b></label>
-            <br>
-            <input type="text" name="name" placeholder="masukan nama lengkap" required>
-            <br>
-            <label for="Tanggal Lahir">Tanggal Lahir</label>
-            <br>
-            <input type="date" name="date" id="date" required>
-            <br>
-            <label for="email">Email</label><br>
-            <input type="email" name="email" id="email" required>
-            <br>
-            <label for="jenis kelamin">Jenis Kelamin</label> <br>
-            <input type="radio" id="laki" name="kelamin" value="laki">
-            <label for="laki">laki-laki</label>
-            <input type="radio" name="kelamin" id="perempuan" value="perempuan">
-            <label for="perempuan">perempuan</label>
-            <br>
-             </select>
-            <br>
-            <label for="alamat">Alamat</label><br>
-            <textarea name="alamat" id="alamat" cols="20" rows="3"></textarea>
-            <br>
-            <button type="submit">submit</button>
-        </div>
+        <div class="form-section">  
+            <form id="userForm">  
+                <div class="form-group">  
+                    <label for="sender-name">Nama:</label>
+                    <div class="input-group">
+                      <input type="text" id="sender-name" name="sender-name" placeholder="Nama">  
+                      <span class="error-message" id="name-error"></span>  
+                    </div>
+                </div>
+                <div class="form-group">  
+                    <label for="tanggal lahir">Tanggal Lahir:</label>
+                    <div class="input-group">
+                      <input type="date" id="birthdate" name="birthdate">  
+                      <span class="error-message" id="birthdate-error"></span>
+                    </div>
+                </div>  
+                <div class="form-group">  
+                    <label>Kelamin:</label>
+                    <div class="input-group">
+                      <div class="radio-group">
+                        <div class="radio-option">
+                          <input type="radio" id="male" name="gender" value="male">  
+                          <label for="male">Laki-laki</label>
+                        </div>
+                        <div class="radio-option">
+                          <input type="radio" id="female" name="gender" value="female">  
+                          <label for="female">Perempuan</label>
+                        </div>
+                      </div> 
+                      <span class="error-message" id="gender-error"></span>
+                    </div>
+                </div>  
+                <div class="form-group">  
+                    <label for="message-content">Pesan:</label>  
+                    <div class="input-group">
+                      <textarea id="message-content" name="message-content" placeholder="Pesan"></textarea>  
+                      <span class="error-message" id="message-error"></span>
+                    </div>
+                </div>  
+                <button type="submit">Submit</button>  
+            </form>  
+            <div class="preview-message">
+              <div class="preview-item">
+                <label>Nama:</label>
+                <span id="sender-full-name"></span>
+              </div>
+              <div class="preview-item">
+                <label>Tanggal Lahir:</label>
+                <span id="sender-birth-date"></span>  
+              </div>
+              <div class="preview-item">
+                <label>Kelamin:</label>
+                <span id="sender-gender"></span>  
+              </div>
+              <div class="preview-item">
+                <label>Pesan:</label>
+                <span id="sender-messages"></span>  
+              </div>
+            </div>  
+        </div>  
     </section>
 </main>
 <hr />
